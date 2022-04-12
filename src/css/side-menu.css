@@ -1,0 +1,207 @@
+.side-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.side-menu__wrapper {
+  position: fixed;
+  background-color: #fff;
+  width: 320px;
+  height: 100%;
+  left: -340px;
+  -webkit-box-shadow: 1px 0 10px 0 #7e7e82;
+          box-shadow: 1px 0 10px 0 #7e7e82;
+}
+
+.side-menu__container {
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.side-menu__header {
+  border-bottom: none;
+}
+
+.side-menu__menu-list {
+  margin: 20px 0;
+}
+
+.side-menu__item {
+  position: relative;
+}
+
+.side-menu__item::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 32px;
+  background-color: #41f6d7;
+  top: 20%;
+  left: -18px;
+  border-radius: 10px;
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
+  -webkit-transition-property: left, -webkit-filter;
+  transition-property: left, -webkit-filter;
+  transition-property: left, filter;
+  transition-property: left, filter, -webkit-filter;
+  -webkit-transition-duration: 0.1s, 0.5s;
+          transition-duration: 0.1s, 0.5s;
+}
+
+.side-menu__item:hover::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 32px;
+  background-color: #41f6d7;
+  top: 20%;
+  left: -20px;
+  border-radius: 10px;
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+}
+
+.side-menu__item-link {
+  display: inline-block;
+  line-height: 24px;
+  padding: 15px 0;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  font-family: TT Lakes Medium;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.side-menu__item:hover .side-menu__item-link, .side-menu__item-link:active {
+  color: #7e7e82;
+}
+
+.side-menu__footer {
+  margin-top: auto;
+  margin-bottom: 24px;
+}
+
+.menu-footer {
+  max-height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu-footer__button-list {
+  margin-bottom: 12px;
+}
+
+.menu-footer__button {
+  line-height: 0;
+}
+
+.menu-footer__contact-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.menu-footer__lang-list {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+}
+
+.contacts__email {
+  display: inline-block;
+  font-family: TT Lakes Medium;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.contacts__phone {
+  display: inline-block;
+  font-family: TT Lakes Bold;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.languages__item {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.languages__item:hover {
+  color: #7e7e82;
+}
+
+.languages__button {
+  font-family: TT Lakes Medium;
+  line-height: 24px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.side-menu--open {
+  display: block;
+  -webkit-filter: drop-shadow(4px 0 10px #979797);
+          filter: drop-shadow(4px 0 10px #979797);
+}
+
+/*________media________*/
+@media screen and (min-width: 768px) {
+  .side-menu__container {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .menu-footer__lang-list {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .side-menu__item:hover::before {
+    left: -26px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .side-menu {
+    opacity: 1;
+  }
+  .side-menu__wrapper {
+    visibility: visible;
+    left: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}

@@ -1,0 +1,46 @@
+@import "_vars";
+
+.footer {
+    flex-shrink: 0;
+    border-top: 1px solid $c-block-highlight;
+    margin-top: 40px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px 0;
+
+    }
+
+    &__block {
+        flex: 1 0 100%;
+        text-align: center;
+        
+    }
+
+    &__text {
+        line-height: 16px;
+        font-family: $f-medium;
+        color: $c-text-second;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        &__wrapper {
+            flex-wrap: nowrap;
+            padding-top: 35px;
+        }
+        &__block {
+            flex: 1 0 30%;
+        }
+        &__block:first-child{
+            text-align: left;
+        }
+        &__block:last-child{
+            text-align: right;
+        }
+    }
+}

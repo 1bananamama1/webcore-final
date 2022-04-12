@@ -1,0 +1,14 @@
+.block-header {
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(white));
+  background-image: linear-gradient(to right, transparent, white);
+  padding: 16px 0;
+  border-top: 1px solid #d9fff5;
+}
+
+.block-header__title {
+  font-family: TT Lakes Regular;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-size: 16px;
+  color: #7e7e82;
+}

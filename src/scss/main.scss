@@ -1,0 +1,94 @@
+@import "_vars";
+
+
+.main {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        height: 90px;
+        overflow: hidden;
+    }
+    &__text-block--open {
+        height: auto;
+    }
+
+    &__text {
+        display: block;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+    }
+
+    &__button-block {
+        display: inline-block;
+        width: 132px;
+        text-align: left;
+        padding-left: 24px;
+        margin: 16px 0;
+        background: url("../img/expand-icon.svg") no-repeat ;
+    }
+
+    &__button {
+        font-family: $f-medium;
+        font-size: 16px;
+        line-height: 24px;
+        
+    }
+
+    &__img {
+        flex: 1 0 320px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.text {
+    font-family: $f-regular;
+    font-size: 14px;
+}
+
+/*_____________media______________*/
+@media screen and (max-width: 580px) {
+    .main__img {
+        margin: 0 -16px;
+    }
+};
+@media screen and (min-width: 768px) {
+    .main {
+        &__wrapper {
+            gap: 48px;
+        }
+        &__info {
+        flex: 1 0 312px;
+        }
+        &__text-block {
+            height: 160px;
+        }
+        &__text-block--open {
+            height: auto;
+        }
+        &__text {
+            line-height: 20px;
+        }
+        &__img {
+            flex: 1 0 360px;
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+}

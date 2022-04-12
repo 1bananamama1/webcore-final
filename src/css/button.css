@@ -1,0 +1,19 @@
+.button {
+  border-radius: 50%;
+  background-color: #ff3e79;
+  -webkit-filter: drop-shadow(0);
+          filter: drop-shadow(0);
+  -webkit-transition-property: -webkit-filter;
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.button:hover {
+  -webkit-filter: drop-shadow(0px 0px 4px #c7112f);
+          filter: drop-shadow(0px 0px 4px #c7112f);
+}

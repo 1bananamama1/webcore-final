@@ -1,0 +1,39 @@
+@import "_vars";
+
+.repair {
+    
+    &__wrapper {
+        margin-top: 24px;
+
+    }
+
+}
+.repair-slider {
+    
+    &__content {
+        height: 160px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text {
+        font-family: $f-medium;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+    }
+    &__button {
+        align-self: flex-end;
+    }
+}
+@media screen and (min-width: 768px) {
+    .repair-slider {
+        &__wrapper {
+            height: 162px;
+            overflow: hidden;
+        }
+        &__wrapper--open {
+            height: auto;
+        }
+        
+    }
+}

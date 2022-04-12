@@ -1,0 +1,86 @@
+@import "_vars";
+
+.page-slider {
+    &__wrapper {
+        display: flex;
+        
+    }
+    &__slide {
+        line-height: 0;
+    }
+    &__content {
+        background-color: #fff;
+        border: 1px solid $c-border;
+        border-radius: 10px;
+        width: 240px;
+        padding: 16px;
+    }
+    &__button{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border: 2px solid $c-accent;
+        border-radius: 50%;
+    }
+    &__button::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 9px;
+        border-radius: 1px;
+        background-color: $c-accent;
+        transform: rotate(45deg) translate(-1px, -1px);
+    }  
+    &__button::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 9px;
+        border-radius: 1px;
+        background-color: $c-accent;
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    &__button-open {
+        display: none;
+        width: 133px;
+        line-height: 24px;
+        font-family: $f-medium;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+        text-align: right;
+        background: url("../img/expand-icon.svg") no-repeat ;
+        margin-top: 24px;
+    }
+    
+}
+.swiper-pagination{
+    position: static;
+    margin-top: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .page-slider {
+        &__wrapper {
+            gap: 16px 24px; 
+        }
+        &__content {
+            width: 224px;
+        }
+        &__button-open {
+            display: block;
+        }
+    }
+}
+@media screen and (min-width: 1120px) {
+    .page-slider {
+        &__wrapper {
+            gap: 16px 32px;
+        }
+        &__content {
+            width: 240px;
+        }
+        &__button-open {
+           display: block ;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.page {
+    flex: 1 0 auto;
+    &__main {
+        margin-top: 8px;
+    }
+    &__brands,
+    &__repair,
+    &__prices {
+        margin-top: 24px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page {
+         
+        &__brands,
+        &__repair,
+        &__prices {
+            margin-top: 32px;
+        }
+    }
+    
+}
+@media screen and (min-width: 1120px) {
+    .page {
+         
+        &__brands,
+        &__repair,
+        &__prices {
+            margin-top: 50px;
+        }
+    }
+    
+}

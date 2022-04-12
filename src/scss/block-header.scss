@@ -1,0 +1,14 @@
+@import "_vars";
+
+.block-header {
+    background-image: linear-gradient(to right, transparent, white); 
+    padding: 16px 0;
+    border-top: 1px solid $c-block-highlight;
+    &__title {
+        font-family: $f-regular;
+        text-transform: uppercase;
+        line-height: 24px;
+        font-size: 16px;
+        color: $c-text-second;
+    }
+}

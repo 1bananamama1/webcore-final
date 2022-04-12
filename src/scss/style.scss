@@ -1,17 +1,70 @@
-$bgColor: #24292e;
-$text: #fff;
+@import "_vars";
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+/* ______body_______ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+  height: 100%;
+  font-family: $f-regular;
+  font-size: 14px;
+  background-color: $c-background;
+  color: $c-text-main;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
+
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+p {
+  margin: 0; 
+  padding: 0;
+} 
+
+@import "_normalize";
+@import "_fonts";
+/*_________blocks___________*/
+@import "page-background.scss";
+@import "block-header.scss";
+@import "page-slider.scss";
+@import "container.scss";
+/*_________header___________*/
+@import "button.scss";
+@import "header.scss";
+@import "side-menu.scss";
+@import "pop-up.scss";
+/*_________main___________*/
+@import "page.scss";
+@import "wrapper.scss";
+@import "nav.scss";
+@import "main.scss";
+@import "brands.scss";
+
+@import "repair.scss";
+@import "prices.scss";
+/*_________footer___________*/
+@import "footer.scss";
+/*_________swiper___________*/

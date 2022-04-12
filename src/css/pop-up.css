@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "TT Lakes Regular";
+  src: url("../fonts/TTLakes-Regular.eot");
+  src: url("../fonts/TTLakes-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TTLakes-Regular.woff") format("woff"), url("../fonts/TTLakes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes Bold";
+  src: url("../fonts/TTLakes-Bold.eot");
+  src: url("../fonts/TTLakes-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/TTLakes-Bold.woff") format("woff"), url("../fonts/TTLakes-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes Medium";
+  src: url("../fonts/TTLakes-Medium.eot");
+  src: url("../fonts/TTLakes-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/TTLakes-Medium.woff") format("woff"), url("../fonts/TTLakes-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pop-up {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.pop-up__wrapper {
+  background-color: #fff;
+  height: 100%;
+  width: 320px;
+  -webkit-box-shadow: 0 0 20px 1px #c4c4c4;
+          box-shadow: 0 0 20px 1px #c4c4c4;
+  border-left: 1px solid #d9fff5;
+  margin-left: auto;
+}
+
+.pop-up__container {
+  padding: 0 16px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.pop-up__header {
+  padding-top: 24px;
+}
+
+.pop-up__form-section {
+  margin-top: 40px;
+}
+
+.pop-up__title {
+  position: relative;
+  line-height: 32px;
+  font-family: TT Lakes Bold;
+  font-size: 24px;
+}
+
+.pop-up__title::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 40px;
+  background-color: #41f6d7;
+  border-radius: 5px;
+  top: -8px;
+  left: -17px;
+}
+
+.pop-up__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 24px;
+}
+
+.form__group {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.form__input {
+  padding: 12px 16px;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.form__input:focus {
+  border: 1px solid #ff3e79;
+}
+
+.form__input::-webkit-input-placeholder {
+  line-height: 24px;
+  font-size: 16px;
+  font-family: TT Lakes Medium;
+  color: #7e7e82;
+}
+
+.form__input:-ms-input-placeholder {
+  line-height: 24px;
+  font-size: 16px;
+  font-family: TT Lakes Medium;
+  color: #7e7e82;
+}
+
+.form__input::-ms-input-placeholder {
+  line-height: 24px;
+  font-size: 16px;
+  font-family: TT Lakes Medium;
+  color: #7e7e82;
+}
+
+.form__input::placeholder {
+  line-height: 24px;
+  font-size: 16px;
+  font-family: TT Lakes Medium;
+  color: #7e7e82;
+}
+
+.form__input:focus::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+
+.form__input:focus:-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+.form__input:focus::-ms-input-placeholder {
+  opacity: 0.3;
+}
+
+.form__input:focus::placeholder {
+  opacity: 0.3;
+}
+
+.form__message {
+  line-height: 24px;
+  height: 118px;
+}
+
+.form__note {
+  font-family: TT Lakes Medium;
+  line-height: 16px;
+}
+
+.form__button {
+  position: relative;
+  line-height: 24px;
+  font-family: TT Lakes Bold;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 20px;
+  padding: 4px 17px;
+  width: 132px;
+  text-align: left;
+  letter-spacing: -0.15px;
+  margin-left: auto;
+}
+
+.form__button::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  top: 10px;
+  right: 17px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.form__button::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ff3e79;
+  top: 11px;
+  right: 20px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.form__link {
+  color: #ff3e79;
+}
+
+@media screen and (min-width: 1280px) {
+  .pop-up {
+    width: 440px;
+  }
+  .pop-up__container {
+    padding: 0 32px;
+  }
+  .pop-up__header {
+    position: absolute;
+    top: 4px;
+    left: -70px;
+  }
+  .pop-up__title::before {
+    left: -33px;
+  }
+}

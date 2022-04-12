@@ -1,0 +1,112 @@
+.main__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__text-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  height: 90px;
+  overflow: hidden;
+}
+
+.main__text-block--open {
+  height: auto;
+}
+
+.main__text {
+  display: block;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+}
+
+.main__button-block {
+  display: inline-block;
+  width: 132px;
+  text-align: left;
+  padding-left: 24px;
+  margin: 16px 0;
+  background: url("../img/expand-icon.svg") no-repeat;
+}
+
+.main__button {
+  font-family: TT Lakes Medium;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 320px;
+          flex: 1 0 320px;
+}
+
+.main__img img {
+  max-width: 100%;
+}
+
+.text {
+  font-family: TT Lakes Regular;
+  font-size: 14px;
+}
+
+/*_____________media______________*/
+@media screen and (max-width: 580px) {
+  .main__img {
+    margin: 0 -16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main__wrapper {
+    gap: 48px;
+  }
+  .main__info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 312px;
+            flex: 1 0 312px;
+  }
+  .main__text-block {
+    height: 160px;
+  }
+  .main__text-block--open {
+    height: auto;
+  }
+  .main__text {
+    line-height: 20px;
+  }
+  .main__img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 360px;
+            flex: 1 0 360px;
+  }
+  .main__img img {
+    border-radius: 10px;
+  }
+}

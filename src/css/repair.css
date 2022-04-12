@@ -1,0 +1,35 @@
+.repair__wrapper {
+  margin-top: 24px;
+}
+
+.repair-slider__content {
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.repair-slider__text {
+  font-family: TT Lakes Medium;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.repair-slider__button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  .repair-slider__wrapper {
+    height: 162px;
+    overflow: hidden;
+  }
+  .repair-slider__wrapper--open {
+    height: auto;
+  }
+}
