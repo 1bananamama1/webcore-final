@@ -54,6 +54,8 @@
 .slider__item {
   padding: 8px 16px;
   white-space: nowrap;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .slider__link {

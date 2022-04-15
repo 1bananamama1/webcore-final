@@ -53,7 +53,8 @@
   font-family: TT Lakes Medium;
   font-size: 16px;
   letter-spacing: -0.2px;
-  text-align: right;
+  text-align: left;
+  padding-left: 24px;
   background: url("../img/expand-icon.svg") no-repeat;
   margin-top: 24px;
 }
@@ -63,9 +64,21 @@
   margin-top: 16px;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #939396;
+}
+
+.swiper-pagination-bullet {
+  background-color: #c2c2c2;
+  width: 12px;
+  height: 12px;
+}
+
 @media screen and (min-width: 768px) {
   .page-slider__wrapper {
     gap: 16px 24px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .page-slider__content {
     width: 224px;
@@ -78,6 +91,8 @@
 @media screen and (min-width: 1120px) {
   .page-slider__wrapper {
     gap: 16px 32px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .page-slider__content {
     width: 240px;

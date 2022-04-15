@@ -21,9 +21,10 @@
         gap: 24px;
         height: 90px;
         overflow: hidden;
+        transition: height 0.4s ease-in-out;
     }
     &__text-block--open {
-        height: auto;
+        height: 100%;
     }
 
     &__text {
@@ -79,7 +80,7 @@
             height: 160px;
         }
         &__text-block--open {
-            height: auto;
+            height: 100%;
         }
         &__text {
             line-height: 20px;

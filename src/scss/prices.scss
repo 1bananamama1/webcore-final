@@ -1,7 +1,10 @@
 @import "_vars";
 
 .prices{
-    
+
+    &__header {
+        margin-bottom: 24px;
+    }
     &__info {
         margin-top: 16px;
         display: flex;
@@ -21,8 +24,16 @@
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.2px;
-
+        
     }
+    &__button-line{
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url('../img/Line-go.svg') no-repeat;
+        transform: translate(3px, 6px);
+    }
+    
 }
 
 .table {
@@ -67,6 +78,11 @@
         &__header {
             display: none;
         }
+        &__wrapper {
+            max-width: 100%;
+            display: flex;
+        }
+       
         &__content {
             background-color: #fff;
             border-radius: 10px;
@@ -75,6 +91,7 @@
             flex-wrap: wrap;
             padding: 16px;
             width: 260px;
+            height: 196px;
             gap: 16px;
             :first-child,
             :nth-child(2) {

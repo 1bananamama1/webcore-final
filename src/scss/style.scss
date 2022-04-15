@@ -44,10 +44,14 @@ p {
   padding: 0;
 } 
 
+.body--no-scroll {
+  overflow: hidden;
+}
+
 @import "_normalize";
 @import "_fonts";
 /*_________blocks___________*/
-@import "page-background.scss";
+
 @import "block-header.scss";
 @import "page-slider.scss";
 @import "container.scss";

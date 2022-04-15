@@ -34,10 +34,12 @@
   gap: 24px;
   height: 90px;
   overflow: hidden;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
 }
 
 .main__text-block--open {
-  height: auto;
+  height: 100%;
 }
 
 .main__text {
@@ -96,7 +98,7 @@
     height: 160px;
   }
   .main__text-block--open {
-    height: auto;
+    height: 100%;
   }
   .main__text {
     line-height: 20px;

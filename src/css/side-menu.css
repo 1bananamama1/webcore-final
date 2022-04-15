@@ -6,9 +6,11 @@
   right: 0;
   bottom: 0;
   z-index: 4;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
 }
 
 .side-menu__wrapper {
@@ -19,6 +21,8 @@
   left: -340px;
   -webkit-box-shadow: 1px 0 10px 0 #7e7e82;
           box-shadow: 1px 0 10px 0 #7e7e82;
+  -webkit-transition: left 0.5s ease-in;
+  transition: left 0.5s ease-in;
 }
 
 .side-menu__container {
@@ -142,6 +146,12 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.contacts__email:hover {
+  color: #7e7e82;
 }
 
 .contacts__phone {
@@ -149,6 +159,12 @@
   font-family: TT Lakes Bold;
   line-height: 32px;
   font-size: 24px;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.contacts__phone:hover {
+  color: #7e7e82;
 }
 
 .languages__item {
@@ -173,12 +189,23 @@
   display: block;
   -webkit-filter: drop-shadow(4px 0 10px #979797);
           filter: drop-shadow(4px 0 10px #979797);
+  opacity: 1;
+  visibility: visible;
+}
+
+.side-menu__wrapper--open {
+  left: 0;
+  -webkit-transition: left 0.5s ease-in;
+  transition: left 0.5s ease-in;
 }
 
 /*________media________*/
 @media screen and (min-width: 768px) {
   .side-menu__container {
     padding: 0 24px;
+  }
+  .side-menu__item:hover::before {
+    left: -28px;
   }
 }
 
@@ -190,12 +217,13 @@
 
 @media screen and (min-width: 1200px) {
   .side-menu__item:hover::before {
-    left: -26px;
+    left: -28px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .side-menu {
+    display: block;
     opacity: 1;
   }
   .side-menu__wrapper {
@@ -203,5 +231,14 @@
     left: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+  .menu__block1 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 0;
+  }
+  .menu__button--close {
+    display: none;
   }
 }

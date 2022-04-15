@@ -43,6 +43,10 @@ p {
   padding: 0;
 }
 
+.body--no-scroll {
+  overflow: hidden;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -482,7 +486,8 @@ template {
   font-family: TT Lakes Medium;
   font-size: 16px;
   letter-spacing: -0.2px;
-  text-align: right;
+  text-align: left;
+  padding-left: 24px;
   background: url("../img/expand-icon.svg") no-repeat;
   margin-top: 24px;
 }
@@ -492,9 +497,21 @@ template {
   margin-top: 16px;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #939396;
+}
+
+.swiper-pagination-bullet {
+  background-color: #c2c2c2;
+  width: 12px;
+  height: 12px;
+}
+
 @media screen and (min-width: 768px) {
   .page-slider__wrapper {
     gap: 16px 24px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .page-slider__content {
     width: 224px;
@@ -507,6 +524,8 @@ template {
 @media screen and (min-width: 1120px) {
   .page-slider__wrapper {
     gap: 16px 32px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .page-slider__content {
     width: 240px;
@@ -710,9 +729,11 @@ template {
   right: 0;
   bottom: 0;
   z-index: 4;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
 }
 
 .side-menu__wrapper {
@@ -723,6 +744,8 @@ template {
   left: -340px;
   -webkit-box-shadow: 1px 0 10px 0 #7e7e82;
           box-shadow: 1px 0 10px 0 #7e7e82;
+  -webkit-transition: left 0.5s ease-in;
+  transition: left 0.5s ease-in;
 }
 
 .side-menu__container {
@@ -846,6 +869,12 @@ template {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.contacts__email:hover {
+  color: #7e7e82;
 }
 
 .contacts__phone {
@@ -853,6 +882,12 @@ template {
   font-family: TT Lakes Bold;
   line-height: 32px;
   font-size: 24px;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.contacts__phone:hover {
+  color: #7e7e82;
 }
 
 .languages__item {
@@ -877,12 +912,23 @@ template {
   display: block;
   -webkit-filter: drop-shadow(4px 0 10px #979797);
           filter: drop-shadow(4px 0 10px #979797);
+  opacity: 1;
+  visibility: visible;
+}
+
+.side-menu__wrapper--open {
+  left: 0;
+  -webkit-transition: left 0.5s ease-in;
+  transition: left 0.5s ease-in;
 }
 
 /*________media________*/
 @media screen and (min-width: 768px) {
   .side-menu__container {
     padding: 0 24px;
+  }
+  .side-menu__item:hover::before {
+    left: -28px;
   }
 }
 
@@ -894,12 +940,13 @@ template {
 
 @media screen and (min-width: 1200px) {
   .side-menu__item:hover::before {
-    left: -26px;
+    left: -28px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .side-menu {
+    display: block;
     opacity: 1;
   }
   .side-menu__wrapper {
@@ -908,32 +955,31 @@ template {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+  .menu__block1 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 0;
+  }
+  .menu__button--close {
+    display: none;
+  }
 }
 
-@font-face {
-  font-family: "TT Lakes Regular";
-  src: url("../fonts/TTLakes-Regular.eot");
-  src: url("../fonts/TTLakes-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TTLakes-Regular.woff") format("woff"), url("../fonts/TTLakes-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+/* .call-popup {
+ 
+};
+.feedback-popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: rgba($color: #ffffff, $alpha: 0.7);
 }
-
-@font-face {
-  font-family: "TT Lakes Bold";
-  src: url("../fonts/TTLakes-Bold.eot");
-  src: url("../fonts/TTLakes-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/TTLakes-Bold.woff") format("woff"), url("../fonts/TTLakes-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "TT Lakes Medium";
-  src: url("../fonts/TTLakes-Medium.eot");
-  src: url("../fonts/TTLakes-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/TTLakes-Medium.woff") format("woff"), url("../fonts/TTLakes-Medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
+ */
 .pop-up {
   position: fixed;
   display: none;
@@ -953,9 +999,11 @@ template {
           box-shadow: 0 0 20px 1px #c4c4c4;
   border-left: 1px solid #d9fff5;
   margin-left: auto;
+  z-index: 6;
 }
 
 .pop-up__container {
+  position: relative;
   padding: 0 16px;
   height: 100%;
   display: -webkit-box;
@@ -1122,7 +1170,7 @@ template {
 }
 
 @media screen and (min-width: 1280px) {
-  .pop-up {
+  .pop-up__wrapper {
     width: 440px;
   }
   .pop-up__container {
@@ -1136,6 +1184,14 @@ template {
   .pop-up__title::before {
     left: -33px;
   }
+}
+
+.feedback-popup--show {
+  display: block;
+}
+
+.call-popup--show {
+  display: block;
 }
 
 /*_________main___________*/
@@ -1232,6 +1288,8 @@ template {
 .slider__item {
   padding: 8px 16px;
   white-space: nowrap;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .slider__link {
@@ -1312,10 +1370,12 @@ template {
   gap: 24px;
   height: 90px;
   overflow: hidden;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
 }
 
 .main__text-block--open {
-  height: auto;
+  height: 100%;
 }
 
 .main__text {
@@ -1374,7 +1434,7 @@ template {
     height: 160px;
   }
   .main__text-block--open {
-    height: auto;
+    height: 100%;
   }
   .main__text {
     line-height: 20px;
@@ -1420,7 +1480,7 @@ template {
 
 @media screen and (min-width: 768px) {
   .brands-slider__wrapper {
-    height: 162px;
+    height: 80px;
     overflow: hidden;
   }
   .brands-slider__wrapper--open {
@@ -1464,6 +1524,10 @@ template {
   }
 }
 
+.prices__header {
+  margin-bottom: 24px;
+}
+
 .prices__info {
   margin-top: 16px;
   display: -webkit-box;
@@ -1490,6 +1554,15 @@ template {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+}
+
+.prices__button-line {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../img/Line-go.svg") no-repeat;
+  -webkit-transform: translate(3px, 6px);
+          transform: translate(3px, 6px);
 }
 
 .table__button {
@@ -1535,6 +1608,12 @@ template {
   .table__header {
     display: none;
   }
+  .table__wrapper {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .table__content {
     background-color: #fff;
     border-radius: 10px;
@@ -1549,6 +1628,7 @@ template {
         flex-wrap: wrap;
     padding: 16px;
     width: 260px;
+    height: 196px;
     gap: 16px;
   }
   .table__content :first-child,

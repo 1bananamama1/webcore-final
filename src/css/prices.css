@@ -1,3 +1,7 @@
+.prices__header {
+  margin-bottom: 24px;
+}
+
 .prices__info {
   margin-top: 16px;
   display: -webkit-box;
@@ -24,6 +28,15 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+}
+
+.prices__button-line {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../img/Line-go.svg") no-repeat;
+  -webkit-transform: translate(3px, 6px);
+          transform: translate(3px, 6px);
 }
 
 .table__button {
@@ -69,6 +82,12 @@
   .table__header {
     display: none;
   }
+  .table__wrapper {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .table__content {
     background-color: #fff;
     border-radius: 10px;
@@ -83,6 +102,7 @@
         flex-wrap: wrap;
     padding: 16px;
     width: 260px;
+    height: 196px;
     gap: 16px;
   }
   .table__content :first-child,

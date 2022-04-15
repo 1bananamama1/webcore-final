@@ -1,6 +1,19 @@
 @import "_vars";
-@import "_fonts";
 
+/* .call-popup {
+ 
+};
+.feedback-popup {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color: rgba($color: #ffffff, $alpha: 0.7);
+}
+ */
 .pop-up {
   position: fixed;
   display: none;
@@ -10,7 +23,6 @@
   bottom: 0;
   z-index: 5;
   background-color: rgba($color: #ffffff, $alpha: 0.7);
-
   &__wrapper {
   background-color: #fff;
   height: 100%;
@@ -18,8 +30,10 @@
   box-shadow: 0 0 20px 1px #c4c4c4;
   border-left: 1px solid $c-block-highlight;
   margin-left: auto;
+  z-index: 6;
   }
   &__container {
+    position: relative;
     padding: 0 16px;
     height: 100%;
     display: flex;
@@ -139,7 +153,9 @@
 
 @media screen and (min-width: 1280px) {
   .pop-up {
-    width: 440px;
+    &__wrapper  {
+      width: 440px;
+    }
     &__container {
       padding: 0 32px;
     }
@@ -157,5 +173,9 @@
 }
 
 .feedback-popup--show {
+  display: block;
+}
 
+.call-popup--show {
+  display: block;
 }
