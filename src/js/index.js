@@ -1,3 +1,5 @@
+import '../scss/style.scss';
+
 const mainTextBlock = document.querySelector('.main__text-block');
 const mainButton = document.querySelector('.main__button');
 const buttonBrands = document.querySelector('.brands-slider__button--expand');
@@ -138,7 +140,7 @@ for (let i = 0; i < callButton.length; i ++) {
     callPopUp.classList.add('call-popup--show');
     document.body.classList.add('body--no-scroll');
 });
-};
+}
 
 for (let i = 0; i < popupButtonClose.length; i ++) {
     popupButtonClose[i].addEventListener ('click', function(evt) {
@@ -150,8 +152,8 @@ for (let i = 0; i < popupButtonClose.length; i ++) {
         popup[i].classList.remove('feedback-popup--show');
     }
     
-})
-};
+});
+}
 
 for (let i = 0; i < popup.length; i ++){
         popup[i].addEventListener('click', function() {
