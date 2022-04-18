@@ -117,7 +117,11 @@ const repairSlider = document.querySelector('.repair-slider');
  };
  pricesSliderInit ();
 
-
+window.addEventListener('resize', function() {
+    brandsSliderInit();
+    repairSliderInit();
+    pricesSliderInit ();
+})
 
 const callButton = document.querySelectorAll('.button--call');
 const popupButtonClose = document.querySelectorAll('.popup__button--close');
